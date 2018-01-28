@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>共享宝马</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="css/global.css" />
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	 <!--页面三-->
+    <div class="pageThird">
+        <!--头部-->
+        <div class="pageTwo-header">
+            <img src="images/icon.png" class="fl" />
+            <img src="images/page2/logo-right.png" class="fr" />
+        </div>
+        <img src="images/page3/dq.png" class="dq-picture" />
+        <!--表单内容 begin-->
+        <div class="form-sumbit">
+            <p class="J_activeState">活动说明</p>
+            <!--姓名-->
+            <div class="form-common-content">
+                <span>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</span>
+                <div class="form-common-content-input">
+                    <img src="images/page3/message-fomrlist_03.png">
+                    <input type="text" />
+                </div>
+            </div>
+            <!--电话-->
+            <div class="form-common-content">
+                <span>电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话</span>
+                <div class="form-common-content-input">
+                    <img src="images/page3/message-fomrlist_06.png">
+                    <input type="text" />
+                </div>
+            </div>
+            <!--公司-->
+            <div class="form-common-content">
+                <span>公&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;司</span>
+                <div class="form-common-content-input">
+                    <img src="images/page3/message-fomrlist_08.png">
+                    <input type="text" />
+                </div>
+            </div>
+            <!--公司人数-->
+            <div class="form-common-content">
+                <span>公司人数</span>
+                <div class="form-common-content-input">
+                    <img src="images/page3/message-fomrlist_10.png">
+                    <input type="number" />
+                </div>
+            </div>
+            <!--意向体验地点-->
+            <div class="form-common-content">
+                <span>意向体验地点</span>
+                <div class="form-common-content-input address-select">
+                    <img src="images/page3/message-fomrlist_12.png">
+                    <select>
+                        <option>体验光</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <a href="page4.html"><input type="submit" value="确认" class="affirm J_affirm" /></a>
+
+        <!--对应第三页底部内容-->
+        <div class="pageThird-footer">
+             <img src="images/page3/message-bgimg.png" class="dpImg" />
+            <span>请确保填写信息的真实性，这将决定预约成功率哟！</span>
+        </div>
+    </div>
+
+    <!--第三页面弹层-->
+    <div class="pageThird-layer">
+        <div class="layer-wrap"></div>
+        <div class="layer-content">
+            <img src="images/page3/popup-cat.png" class="popup-cat" />
+            <!--关闭弹层按钮-->
+            <img src="images/page3/close.png" class="popup-close" />
+            <div class="layer-activeRule">
+                <span>活动规则</span>
+            </div>
+            <h3 class="layer-title">Gofun Pro 共享宝马来袭<br/>低至0元出去浪！</h3>
+            <div class="layer-activeRule-content">
+                <p>一、活动时间：2018年1月31日-2018年2月9日</p>
+                <p>二、活动地区：北京</p>
+                <p>三、参与方式：</p>
+                <p>1、完整输入真实报名信息提交后，即参与成功；</p>
+                <p>2、活动期间每个手机号每天仅可选择1种预约方式报名1次。</p>
+                <p>四、体验优惠获取：</p>
+                <p> 任意应用商店搜索“Gofun出行”，下载App并注册手机号码后的2个工作日内，可得与您预约方式相对应的体验券1张。</p>
+                <p>1、个人预约用户：1元2小时宝马限时体验券（必得，以短信提示为准）</p>
+                <p>2、4人预约用户：10元5小时宝马限时体验券（必得，以短信提示为准）</p>
+                <p>3、8人预约用户：0元48小时宝马限时体验券（每天抽取2人，每人2张，以短信提示为准）</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript">
+	
+	pageThird();
+	//页面三相关功能
+	function pageThird(){
+		nextPage(document.querySelector(".J_affirm"),3);
+		//获取弹窗
+		var nd_layer = document.querySelector('.pageThird-layer');
+		//获取关闭弹窗按钮
+		var nd_close = document.querySelector(".popup-close");
+		//隐藏活动规则弹窗
+		nd_close.onclick = function() {
+		    nd_layer.style.display = "none";
+		}
+		//获取活动规则
+		var nd_activeState = document.querySelector(".J_activeState");
+		//显示活动规则弹窗
+		nd_activeState.onclick = function() {
+		    nd_layer.style.display = "block";
+		}
+	}
+	//切换轮播下一页
+	function nextPage(ele,index){
+		ele.onclick = function(){
+			$(".pageWrap").eq(index).addClass("fadeInDown");
+		}
+	}
+</script>

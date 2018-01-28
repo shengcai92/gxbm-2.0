@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>共享宝马</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	 <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="css/global.css" />
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<!-- 页面二 -->
+    <div class="pageSecond">
+        <!--头部-->
+        <div class="pageTwo-header">
+            <img src="images/icon.png" class="fl" />
+            <img src="images/page2/logo-right.png" class="fr" />
+        </div>
+        <!--轮播部分 begin-->
+        <div class="swiper-container swpier-second">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/page2/banner1.png" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/page2/banner2.png" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/page2/banner3.png" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/page2/banner4.png" />
+                </div>
+            </div>
+            <!--前后切换轮播图表-->
+            <div class="swiper-button-prev swpier-button-gray-left"></div>
+            <div class="swiper-button-next swpier-button-gray-right"></div>
+        </div>
+        <!--轮播部分 end -->
+        <img src="images/page2/personal-img3.png" class="dpImg" />
+        <a href="page3.html"><div class="apply">立即报名</div></a>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript">
+	//初始化swpier
+	var mySwiper = new Swiper('.swpier-second', {
+	    prevButton: '.swiper-button-prev',
+	    nextButton: '.swiper-button-next'
+	    // direction:"horizontal"
+	})
+	pageSecond();
+	//页面二相关功能
+	function pageSecond(){
+		nextPage(document.querySelector(".apply"),2);
+	}
+	//切换轮播下一页
+	function nextPage(ele,index){
+		ele.onclick = function(){
+			$(".pageWrap").eq(index).addClass("fadeInDown");
+		}
+	}
+</script>

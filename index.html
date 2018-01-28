@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="css/global.css" />
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<!-- 页面一 -->
+    <div class="pageFirst pageWrap cssjr">
+        <!--头部	BEGIN-->
+        <div class="pageOne-header">
+            <img src="images/icon.png" class="fl" />
+            <img src="images/right-sign.png" class="fr" />
+        </div>
+        <!--头部 END-->
+        <!--主要信息   BEGIN-->
+        <div class="pageOne-section">
+            <div class="section-first">
+                <span class="animated bounceInLeft cssjr">共享宝马</span>
+                <img src="images/car.png" class="carAnimate " />
+            </div>
+            <div class="section-second">
+                <img src="images/gofun.png" class="animated bounceInLeft"/>
+                <span class="animated sizeAnimateSecond">来</span>
+                <span class="animated sizeAnimate"style="right:54px;">袭</span>
+            </div>
+            <img src="images/lowPrice.png" class="section-third animated bounceInLeft" />
+        </div>
+        <!--主要信息   END-->
+        <!-- 底部 BEGIN-->
+        <div class="pageOne-footer">
+        	<div class="footer-city-main">
+            	<img src="images/city.png?v=2012" class="footer-city" />
+       		</div>
+            <img src="images/earth.png" class="footer-earth" />
+            <div class="footer-car-mian">
+            <img src="images/big-car.png" class="footer-car" />
+        	</div>
+            <a href="page2.html"><div class="footer-order">抢先预约</div></a>
+            <img src="images/footer-back.png" class="footer-back" />
+        </div>
+        <!-- 底部 END-->
+    </div>
+ 
+
+    <!--第一个页面弹窗-->
+     <div class="pageFrist-layer">
+    	<div class="layer-wrap "></div>
+    	<div class="pageFrist-layer-main">
+    		<img src="images/page2/popup-cat.png"/>
+    		<!--文案一-->
+    		<p>您已参加过活动<br/>谢谢支持!</p>
+    		<!--文案二-->
+    		<p>活动结束<br/>谢谢您的支持!</p>
+			<img src="images/page2/popup-img.png"  class="pageFrist-footerBack"/>
+    	</div>
+    </div>
+</body>
+</html>
+
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script>
+	
+	pageFrist();
+	//页面一相关功能
+	function pageFrist() {
+		nextPage(document.querySelector(".footer-order"),1);
+	}
+	//切换轮播下一页
+	function nextPage(ele,index){
+		ele.onclick = function(){
+			$(".pageWrap").eq(index).addClass("fadeInDown");
+		}
+	}
+	
+</script>

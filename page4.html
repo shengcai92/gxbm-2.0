@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>共享宝马</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	 <link rel="stylesheet" href="css/global.css" />
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<!--页面4-->
+    <div class="pageFour pageWrap cssjr">
+        <!--头部-->
+        <div class="pageTwo-header">
+            <img src="images/icon.png" class="fl" />
+            <img src="images/page2/logo-right.png" class="fr" />
+        </div>
+        <img src="images/page2/success-img1.png" class="dpImg" />
+        <img src="images/page2/success-img2.png" class="dpImg" />
+        <div class="affirm J_shade" style="width:156px">奔走相告</div>
+    </div>
+    <!--第四页面弹层-->
+    <div class="pageFour-layer">
+    	<div class="layer-wrap J_layerShade"></div>
+		<img src="images/page2/success-jiantou.png" />
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript">
+	
+	pageFour();
+	//页面四相关功能
+	function pageFour(){
+		$(".J_shade").on('click',function(){
+			$(".pageFour-layer").show();
+		})
+		$(".J_layerShade").on('click',function(){
+			$(".pageFour-layer").hide();
+		})
+	}
+</script>
