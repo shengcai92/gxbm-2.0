@@ -198,12 +198,12 @@
 
  .swpier-button-gray-left {
      opacity: 1 !important;
-     background-image: url(images/page2/prev-btn.png) !important;
+     background-image: url(../images/page2/prev-btn.png) !important;
  }
 
  .swpier-button-gray-right {
      opacity: 1 !important;
-     background-image: url(images/page2/next-btn.png) !important;
+     background-image: url(../images/page2/next-btn.png) !important;
  }
 
  .dpImg {
@@ -451,23 +451,23 @@
      transform-origin: 0 0;
  }
 
- // .pageSecond,
- // .pageThird,
- // .pageFour {
- //     z-index: 1000;
- //     position: fixed;
- //     left: 0;
- //     top: 0;
- //     width: 100%;
- //     height: 100%;
- //     background: #fff;
- //     transform: translate3d(0, -100%, 0);
- //     /*-webkit-transform: translateY(-200%);*/
- //     /*transition: all .4s ease-out;*/
- //     overflow: auto;
- //     /*display: none;*/
- //     /*opacity: 0;*/
- // }
+ .pageSecond,
+ .pageThird,
+ .pageFour {
+     z-index: 1000;
+     position: fixed;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     background: #fff;
+     transform: translate3d(0, -100%, 0);
+     /*-webkit-transform: translateY(-200%);*/
+     /*transition: all .4s ease-out;*/
+     overflow: auto;
+     /*display: none;*/
+     /*opacity: 0;*/
+ }
 
 
  .fadeInDown {
